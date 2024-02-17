@@ -4,8 +4,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var config_1 = require("payload/config");
-var db_mongodb_1 = require("@payloadcms/db-mongodb");
 var bundler_webpack_1 = require("@payloadcms/bundler-webpack");
+var db_mongodb_1 = require("@payloadcms/db-mongodb");
 var richtext_slate_1 = require("@payloadcms/richtext-slate");
 var path_1 = __importDefault(require("path"));
 var Users_1 = require("./collections/Users");
@@ -24,13 +24,13 @@ exports.default = (0, config_1.buildConfig)({
         admin: '/sell',
     },
     admin: {
-        user: "users",
+        user: 'users',
         bundler: (0, bundler_webpack_1.webpackBundler)(),
         meta: {
-            titleSuffix: "- DigitalHippo",
-            favicon: "/favicon.ico",
+            titleSuffix: '- DigitalHippo',
+            favicon: '/favicon.ico',
             ogImage: '/thumbnail.jpg',
-        }
+        },
     },
     rateLimit: {
         max: 2000,
@@ -41,5 +41,5 @@ exports.default = (0, config_1.buildConfig)({
     }),
     typescript: {
         outputFile: path_1.default.resolve(__dirname, 'payload-types.ts'),
-    }
+    },
 });
